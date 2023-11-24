@@ -27,3 +27,6 @@ mcmodsrepo
 forge*changelog.txt
 build.bat
 *.bat
+
+# Vscode files
+.vscode

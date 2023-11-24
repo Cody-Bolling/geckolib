@@ -116,7 +116,7 @@ public abstract class GeoItemRenderer<T extends Item & IAnimatable> extends Bloc
 		if (transformType == ItemTransforms.TransformType.GUI) {
 			poseStack.pushPose();
 			MultiBufferSource.BufferSource defaultBufferSource = bufferSource instanceof MultiBufferSource.BufferSource bufferSource2 ?
-					bufferSource2 : Minecraft.getInstance().renderBuffers().bufferSource();
+					bufferSource2 : Minecraft.getInstance().levelRenderer.renderBuffers.bufferSource();
 			Lighting.setupForFlatItems();
 			render((T)stack.getItem(), poseStack, bufferSource, packedLight, stack);
 			defaultBufferSource.endBatch();

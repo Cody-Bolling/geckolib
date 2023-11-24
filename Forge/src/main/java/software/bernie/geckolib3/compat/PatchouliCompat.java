@@ -11,7 +11,7 @@ public class PatchouliCompat {
 		if (Minecraft.getInstance().gui.equals(GuiBook.class)) {
 			poseStack.pushPose();
 			Lighting.setupForFlatItems();
-			Minecraft.getInstance().renderBuffers().bufferSource().endBatch();
+			Minecraft.getInstance().levelRenderer.renderBuffers.bufferSource().endBatch();
 			RenderSystem.enableDepthTest();
 			Lighting.setupFor3DItems();
 			poseStack.popPose();

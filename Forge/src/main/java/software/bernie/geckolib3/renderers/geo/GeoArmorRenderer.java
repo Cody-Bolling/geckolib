@@ -213,7 +213,7 @@ public abstract class GeoArmorRenderer<T extends ArmorItem & IAnimatable> extend
 		Color renderColor = getRenderColor(this.currentArmorItem, partialTick, poseStack, null, buffer, packedLight);
 		RenderType renderType = getRenderType(this.currentArmorItem, partialTick, poseStack, null, buffer, packedLight,
 				getTextureLocation(this.currentArmorItem));
-		MultiBufferSource bufferSource = Minecraft.getInstance().renderBuffers().bufferSource();
+		MultiBufferSource bufferSource = Minecraft.getInstance().levelRenderer.renderBuffers.bufferSource();
 		buffer = ItemRenderer.getArmorFoilBuffer(bufferSource,
 				RenderType.armorCutoutNoCull(getTextureLocation(currentArmorItem)),
 				false, itemStack.hasFoil());
